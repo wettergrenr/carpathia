@@ -4,8 +4,7 @@ MAINTAINER Robert Wettergren "robert.x.wettergren@aib.ie"
 USER root
 SHELL ["/bin/bash", "-c"]
 
-#COPY jdk-7u80-linux-x64.tar.gz /tmp
-RUN wget -nv https://drive.google.com/file/d/1_-Oy5TqAmtS0fGH5pMZSM2x-WEZcihSi/view?usp=sharing 
+RUN wget -nv https://github.com/wettergrenr/carpathia/releases/download/0.1/jdk-7u80-linux-x64.tar.gz -P /tmp
 RUN mkdir -p /usr/local/java
 RUN tar xvzf /tmp/jdk-7u80-linux-x64.tar.gz -C /usr/local/java/
 RUN rm /tmp/jdk-7u80-linux-x64.tar.gz
